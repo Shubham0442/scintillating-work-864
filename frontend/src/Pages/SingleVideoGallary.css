@@ -1,0 +1,161 @@
+.playback {
+  height: auto;
+  position: relative;
+  background: radial-gradient(
+    ellipse farthest-corner at top right,
+    transparent 50%,
+    #000
+  );
+  width: "100%";
+  border: "4px solid green";
+}
+
+.playback video {
+  object-fit: cover;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+.playback-content {
+  width: 95%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+
+.playback-content_text {
+  height: 250px;
+  width: 100%;
+  margin-bottom: 80px;
+  margin-left: -350px;
+  margin-top: 600px;
+  text-align: left;
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+}
+.divsev {
+  height: 100%;
+  width: 30%;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#p1 {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+.start {
+  padding: 20px 50px;
+  border-radius: 8px;
+  background: #027bff;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin-left: 40px;
+  border: none;
+}
+.add {
+  padding: 20px 38px;
+  border-radius: 8px;
+  background: #4a4c4e;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin-left: 40px;
+  margin-top: 15px;
+  opacity: 0.5;
+}
+#p2 {
+  color: white;
+  font-size: 20px;
+  width: 90%;
+  margin-top: 50px;
+}
+#p3 {
+  color: white;
+  font-size: 20px;
+  width: 100%;
+  margin-top: 50px;
+}
+#p4 {
+  display: inline;
+  color: #b8b8b8;
+}
+
+#i1 {
+  margin-left: 20px;
+  color: #b8b8b8;
+}
+#i2 {
+  margin-left: 5px;
+  color: #b8b8b8;
+}
+#i3 {
+  margin-left: 5px;
+  color: #b8b8b8;
+}
+#i4 {
+  margin-left: 5px;
+  color: #b8b8b8;
+}
+#i5 {
+  margin-left: 5px;
+  color: #b8b8b8;
+}
+#i6 {
+  margin-left: 5px;
+  color: #b8b8b8;
+}
+#i7 {
+  margin-left: 5px;
+  color: #b8b8b8;
+}
+
+.divsev:nth-of-type(2) {
+  width: 50%;
+}
+.imgdiv {
+  width: 350px;
+  margin-top: -550px;
+}
+.imgdiv img {
+  width: 100%;
+}
+.imgdiv p {
+  text-align: center;
+}
+
+/* Carousal Css */
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.mySwiper {
+  width: 98%;
+  /* border: 1px solid blue; */
+  margin: 0px;
+}
+
+.swiper-slide {
+  /* text-align: center; */
+  font-size: 10px;
+  /* background: blue; */
+  border-radius: 10px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: white !important;
+}
+
+html:root {
+  --swiper-navigation-size: 20px;
+  /* --swiper-navigation-height: 89px; */
+}
