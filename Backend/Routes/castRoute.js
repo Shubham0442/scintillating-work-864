@@ -6,6 +6,18 @@ const { Series } = require("../Models/seriesModel");
 
 const castRouter = Router();
 
+castRouter.get("/read/:seriesId", async(req, res)=>{
+
+    const {seriesId} = req.params
+
+    const allCastAndCrew = await Cast.find({ seriesId: seriesId })
+
+    console.log(allCastAndCrew);
+
+    res.send({ "castAndCrew" : allCastAndCrew })
+
+})
+
 castRouter.post("/create/:seriesId", Authenticate, Authorise(["admin"]), async(req, res)=>{
     
     const { userId } = req.body
