@@ -1,0 +1,14 @@
+.video_Container{
+ position: relative;
+ padding-bottom: 50vh;
+ height: 100vh;
+ width: 100%;
+ background: url('https://is3-ssl.mzstatic.com/image/thumb/Features112/v4/bb/2c/ae/bb2cae80-b4e9-7193-8a4f-fb1129ad59ca/278c3382-c095-47b3-ba19-d82887d8b13a.png/3358x1889sr.jpg') no-repeat;
+ background-size: cover;
+ /* border :  1px solid red; */
+}
+
+.slider_component{
+    position: absolute;
+    top : 50%;
+}
