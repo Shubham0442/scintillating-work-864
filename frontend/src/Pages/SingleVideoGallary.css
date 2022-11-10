@@ -159,3 +159,11 @@ html:root {
   --swiper-navigation-size: 20px;
   /* --swiper-navigation-height: 89px; */
 }
+
+.btnhide {
+  background-color: transparent;
+  color: transparent;
+}
+.btnhide:hover {
+  color: #3a88e8;
+}

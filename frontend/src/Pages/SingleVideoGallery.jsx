@@ -2,9 +2,10 @@ import React from "react";
 import {
   Box,
   Button,
-  ButtonGroup,
-  Container,
   HStack,
+  Image,
+  Select,
+  Stack,
   Text,
   VStack,
 } from "@chakra-ui/react";
@@ -15,6 +16,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./SingleVideoGallary.css";
 import Card0230 from "./Card0230";
+import { FaPlayCircle } from "react-icons/fa";
 const poster1 =
   "https://is2-ssl.mzstatic.com/image/thumb/Qkhk0gLz2yXBfHkIhkcSAA/1679x945sr.webp";
 
@@ -70,6 +72,14 @@ const obj = [
         desc: "Held captive by a shadowy organization, Allie and Margot must find a way to escape and get back to their kids.",
         duration: "42 min",
         release_date: "May 28",
+      },
+      {
+        epi: "EPISODE 7",
+        img: "https://is3-ssl.mzstatic.com/image/thumb/xyULr4ZjJ1zrxTWgPNkldg/1478x832.webp",
+        title: "The Glass Sandwich",
+        desc: "Season finale. The Foxes are forced into a crisis that will either bring them back together or tear them apart forever.",
+        duration: "56 min",
+        release_date: "Jul 4",
       },
     ],
     casts: [
@@ -143,7 +153,8 @@ const SingleVideoGallery = () => {
         <video
           width="100%"
           height="100%"
-          src="https://is2-ssl.mzstatic.com/image/thumb/r8WioQPptoS1zWhCz_stsw/1478x832.webp"
+          src="https://www.apple.com/105/media/us/apple-tv-plus/2022/4114721e-12d2-4260-87c4-678589d5f804/anim/supercut/large.mp4"
+          type="video/mp4"
           poster={poster1}
         ></video>
         <div class="playback-content">
@@ -270,7 +281,22 @@ const SingleVideoGallery = () => {
           </HStack>
         </div>
       </div>
-      <VStack bgColor="#2d2d2d" w="100%" h="100vh">
+      {/* ----------------- Top Sectio End here --------------------------- */}
+      {/* ------------------Carousal Start ---------------------------------------- */}
+      <VStack bgColor="#2d2d2d" h="200vh">
+        {/* #2d2d2d */}
+        <Stack w="100%" p="15px">
+          <Select
+            placeholder="Season 1"
+            w="8%"
+            variant="unstyled"
+            // textColor="white"
+          >
+            <option value="option2">Season 2</option>
+          </Select>
+        </Stack>
+
+        {/* icon={<MdArrowDropDown />} */}
         <div
           style={{
             width: "100%",
@@ -319,8 +345,267 @@ const SingleVideoGallery = () => {
                 })}
             </Swiper>
           </Box>
+          <VStack>
+            <Text color="white" textAlign="left" w="100%" pt="10px">
+              Trailers
+            </Text>
+            <HStack w="100%" gap="15px">
+              <Box
+                w="25%"
+                h="200px"
+                backgroundColor="white"
+                display="flex"
+                justifyItems="center"
+                justifyContent="center"
+                backgroundImage="url('https://is2-ssl.mzstatic.com/image/thumb/bcp-BsYXJg4WSm-q6njzcg/1478x832.webp')"
+                backgroundSize="cover"
+                borderRadius="10px"
+                _hover={{
+                  opacity: "0.6",
+                }}
+              >
+                {/* <Image
+                  borderRadius="10px"
+                  src="https://is2-ssl.mzstatic.com/image/thumb/bcp-BsYXJg4WSm-q6njzcg/1478x832.webp"
+                  _hover={{
+                    opacity: "0.6",
+                  }}
+                /> */}
+                <button
+                  className="btnhide"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  <FaPlayCircle
+                    style={{
+                      width: "40px",
+                      height: "40px",
+                    }}
+                  />
+                </button>
+              </Box>
+              <Box
+                w="25%"
+                h="200px"
+                backgroundColor="white"
+                justifyItems="center"
+                justifyContent="center"
+                display="flex"
+                className="btnbox"
+                backgroundImage="url('https://is3-ssl.mzstatic.com/image/thumb/xyULr4ZjJ1zrxTWgPNkldg/1478x832.webp')"
+                backgroundSize="cover"
+                borderRadius="10px"
+                _hover={{
+                  opacity: "0.6",
+                }}
+              >
+                {/* <Image
+                  borderRadius="10px"
+                  src="https://is3-ssl.mzstatic.com/image/thumb/xyULr4ZjJ1zrxTWgPNkldg/1478x832.webp"
+                  _hover={{
+                    opacity: "0.6",
+                  }}
+                /> */}
+                <button
+                  className="btnhide"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  {" "}
+                  <FaPlayCircle
+                    style={{
+                      width: "40px",
+                      height: "40px",
+                    }}
+                  />
+                </button>
+              </Box>
+              <Box
+                w="25%"
+                h="200px"
+                backgroundColor="white"
+                display="flex"
+                justifyItems="center"
+                justifyContent="center"
+                backgroundImage="url('https://is3-ssl.mzstatic.com/image/thumb/W0VZ9__hoaDH8J0O0NvbAA/1478x832.webp')"
+                backgroundSize="cover"
+                borderRadius="10px"
+                _hover={{
+                  opacity: "0.6",
+                }}
+              >
+                {/* <Image
+                  borderRadius="10px"
+                  src="https://is3-ssl.mzstatic.com/image/thumb/W0VZ9__hoaDH8J0O0NvbAA/1478x832.webp"
+                  _hover={{
+                    opacity: "0.6",
+                  }}
+                /> */}
+                <button
+                  className="btnhide"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  {" "}
+                  <FaPlayCircle
+                    style={{
+                      width: "40px",
+                      height: "40px",
+                    }}
+                  />
+                </button>
+              </Box>
+            </HStack>
+          </VStack>
+
+          <VStack>
+            <Text color="white" textAlign="left" w="100%" pt="10px">
+              Bonus Content
+            </Text>
+            <HStack w="100%" gap="15px">
+              <Box
+                w="25%"
+                h="200px"
+                backgroundColor="white"
+                display="flex"
+                justifyItems="center"
+                justifyContent="center"
+                backgroundImage="url('https://is1-ssl.mzstatic.com/image/thumb/y73ipreK3gMXTpmKCNBUKw/1478x832.webp')"
+                backgroundSize="cover"
+                borderRadius="10px"
+                _hover={{
+                  opacity: "0.6",
+                }}
+              >
+                {/* <Image
+                  borderRadius="10px"
+                  src="https://is1-ssl.mzstatic.com/image/thumb/y73ipreK3gMXTpmKCNBUKw/1478x832.webp"
+                  _hover={{
+                    opacity: "0.6",
+                  }}
+                /> */}
+                <button
+                  className="btnhide"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  {" "}
+                  <FaPlayCircle
+                    style={{
+                      width: "40px",
+                      height: "40px",
+                    }}
+                  />
+                </button>
+              </Box>
+              <Box
+                w="25%"
+                h="200px"
+                backgroundColor="white"
+                display="flex"
+                justifyItems="center"
+                justifyContent="center"
+                backgroundImage="url('https://is4-ssl.mzstatic.com/image/thumb/zBfC_4lmX-aGrqShM4Io0A/1478x832.webp')"
+                backgroundSize="cover"
+                borderRadius="10px"
+                _hover={{
+                  opacity: "0.6",
+                }}
+              >
+                {/* <Image
+                  borderRadius="10px"
+                  src="https://is4-ssl.mzstatic.com/image/thumb/zBfC_4lmX-aGrqShM4Io0A/1478x832.webp"
+                  _hover={{
+                    opacity: "0.6",
+                  }}
+                /> */}
+                <button
+                  className="btnhide"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  {" "}
+                  <FaPlayCircle
+                    style={{
+                      width: "40px",
+                      height: "40px",
+                    }}
+                  />
+                </button>
+              </Box>
+              <Box
+                w="25%"
+                h="200px"
+                backgroundColor="white"
+                display="flex"
+                justifyItems="center"
+                justifyContent="center"
+                backgroundImage="url('https://is4-ssl.mzstatic.com/image/thumb/5Ic1cP9utxvz-uBmEssh9A/1478x832.webp')"
+                backgroundSize="cover"
+                borderRadius="10px"
+                _hover={{
+                  opacity: "0.6",
+                }}
+              >
+                {/* <Image
+                  borderRadius="10px"
+                  src="https://is4-ssl.mzstatic.com/image/thumb/5Ic1cP9utxvz-uBmEssh9A/1478x832.webp"
+                  _hover={{
+                    opacity: "0.6",
+                  }}
+                /> */}
+                <button
+                  className="btnhide"
+                  // style={{
+                  //   width: "290px",
+                  // }}
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  <FaPlayCircle
+                    style={{
+                      width: "40px",
+                      height: "40px",
+                      // color: "white",
+                    }}
+                  />
+                </button>
+              </Box>
+            </HStack>
+          </VStack>
         </div>
       </VStack>
+      {/* -------------------Carosual Part End here --------------------------- */}
     </>
   );
 };
