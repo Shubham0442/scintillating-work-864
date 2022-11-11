@@ -162,7 +162,7 @@ const SingleVideoGallery = () => {
       </div>
       {/* ----------------- Top Sectio End here --------------------------- */}
       {/* ------------------Carousal Start ---------------------------------------- */}
-      <VStack bgColor="#2d2d2d" h="300vh">
+      <VStack bgColor="#2d2d2d" h="350vh">
         {/* #2d2d2d */}
         <Stack w="100%" p="15px">
           <Select
@@ -581,6 +581,40 @@ const SingleVideoGallery = () => {
                   );
                 })}
             </Swiper>
+          </Box>
+          {/* Cast and Crew Part start from here */}
+
+          {/* How To watch Apple tV */}
+          <Box borderBottom="0.1px solid gray" p="30px 0px 30px 0px" w="100%">
+            <Text color="white" w="100%" textAlign="left" pb="10px">
+              How to Watch
+            </Text>
+            <Box w="25%" borderRadius="10px">
+              <Image
+                borderTopRadius="10px"
+                src="https://is1-ssl.mzstatic.com/image/thumb/DB8YqlVtN7M8YvGvgsP2eg/400x225.png"
+              />
+              <Text
+                h="80px"
+                color="white"
+                display="flex"
+                alignItems="center"
+                bgColor="#1f1f1f"
+                borderBottomRadius="10px"
+                pl="10px"
+              >
+                Start Free Trial
+              </Text>
+            </Box>
+            <Text
+              width="25%"
+              textAlign="center"
+              color="white"
+              fontSize="12px"
+              pt="5px"
+            >
+              7 days free, then ₹599/month.
+            </Text>
           </Box>
         </div>
       </VStack>
