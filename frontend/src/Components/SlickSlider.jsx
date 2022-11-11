@@ -6,41 +6,6 @@ import "./SlickSlider.css";
 
 export default class Responsive extends Component {
   render() {
-    const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
-      <div {...props} className = "lefttArrow">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="25"
-          height="25"
-          fill="grey"
-          class="bi bi-chevron-left bottom5"
-          viewBox="0 0 16 16"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
-          ></path>
-        </svg>
-      </div>
-    );
-
-    const SlickArrowRight = ({ currentSlide, slideCount, ...props }) => (
-      <div {...props} className = "rightArrow">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="25"
-          height="25"
-          fill="grey"
-          // class="bi bi-chevron-right bottom5"
-          viewBox="0 0 16 16"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
-          ></path>
-        </svg>
-      </div>
-    );
     var settings = {
       dots: false,
       infinite: false,
@@ -48,9 +13,7 @@ export default class Responsive extends Component {
       slidesToShow: 5,
       slidesToScroll: 5,
       initialSlide: 0,
-      prevArrow : <SlickArrowLeft/>,
-      nextArrow: <SlickArrowRight />,
-
+     
       responsive: [
         {
           breakpoint: 1024,
@@ -58,7 +21,8 @@ export default class Responsive extends Component {
             slidesToShow: 3,
             slidesToScroll: 3,
             infinite: true,
-            dots: true,
+            dots: false,
+            
           },
         },
         {
@@ -67,8 +31,7 @@ export default class Responsive extends Component {
             slidesToShow: 2,
             slidesToScroll: 2,
             initialSlide: 2,
-            // prevArrow: <SlickArrowLeft />,
-            nextArrow: <SlickArrowRight />,
+           
           },
         },
         {
@@ -82,7 +45,8 @@ export default class Responsive extends Component {
     };
     return (
       <div>
-        <div className="slider_container">
+        <div className="slider_Container">
+          <h2>Featured</h2>
           <Slider {...settings}>
             <div className="sliderBox">
               <img src="https://is4-ssl.mzstatic.com/image/thumb/QSr2iwSvH8UiozdTcESa-w/1478x832.webp" />

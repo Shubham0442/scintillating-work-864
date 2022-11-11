@@ -5,6 +5,7 @@ import {
   HStack,
   Image,
   Select,
+  Slide,
   Stack,
   Text,
   VStack,
@@ -17,135 +18,13 @@ import "swiper/css/navigation";
 import "./SingleVideoGallary.css";
 import Card0230 from "./Card0230";
 import { FaPlayCircle } from "react-icons/fa";
+import data from "../data/singlevideogallarydata";
 const poster1 =
   "https://is2-ssl.mzstatic.com/image/thumb/Qkhk0gLz2yXBfHkIhkcSAA/1679x945sr.webp";
 
 const logo =
   "https://is2-ssl.mzstatic.com/image/thumb/WM_VxvRJ1tr0ZldF-c2H1Q/1200x450.webp";
-const obj = [
-  {
-    episodes: [
-      {
-        epi: "EPISODE 1",
-        img: "https://is2-ssl.mzstatic.com/image/thumb/r8WioQPptoS1zWhCz_stsw/1478x832.webp",
-        title: "Light Out",
-        desc: "When the U.S. government finally tracks them down, the off-the-grid Fox family flees to begin a new life.",
-        duration: "57 min",
-        release_date: "Apr 30",
-      },
-      {
-        epi: "EPISODE 2",
-        img: "https://is4-ssl.mzstatic.com/image/thumb/5Du6a3w-KZmaMAseFSe-Vw/1478x832.webp",
-        title: "foxes and coyotes",
-        desc: "The Foxes enlist the help of two coyotes who promise to take them across the U.S. border into Mexico.",
-        duration: "55 min",
-        release_date: "Apr 30",
-      },
-      {
-        epi: "EPISODE 3",
-        img: "https://is1-ssl.mzstatic.com/image/thumb/AL4KeAShfOftYDU2PpRE9g/1478x832.webp",
-        title: "Everybody Knows This Is Nowhere",
-        desc: "With the Feds closing in on them, the Foxes and Chuy must cross the desert on foot—and face adversity both natural and man-made.",
-        duration: "47 min",
-        release_date: "May 7",
-      },
-      {
-        epi: "EPISODE 4",
-        img: "https://is4-ssl.mzstatic.com/image/thumb/5Ic1cP9utxvz-uBmEssh9A/1478x832.webp",
-        title: "Bus stop",
-        desc: "The Foxes seek refuge in an opulent hacienda, where a family’s all-powerful matriarch sees them as pawns in her own game.",
-        duration: "53 min",
-        release_date: "May 14",
-      },
-      {
-        epi: "EPISODE 5",
-        img: "https://is1-ssl.mzstatic.com/image/thumb/y73ipreK3gMXTpmKCNBUKw/1478x832.webp",
-        title: "Elvis, Jesus, Coca-Cola",
-        desc: "Arriving in Mexico City, the Fox parents attempt to connect with Allie’s mysterious contact while the kids get into trouble.",
-        duration: "49 min",
-        release_date: "May 21",
-      },
-      {
-        epi: "EPISODE 6",
-        img: "https://is3-ssl.mzstatic.com/image/thumb/W0VZ9__hoaDH8J0O0NvbAA/1478x832.webp",
-        title: "Calaca",
-        desc: "Held captive by a shadowy organization, Allie and Margot must find a way to escape and get back to their kids.",
-        duration: "42 min",
-        release_date: "May 28",
-      },
-      {
-        epi: "EPISODE 7",
-        img: "https://is3-ssl.mzstatic.com/image/thumb/xyULr4ZjJ1zrxTWgPNkldg/1478x832.webp",
-        title: "The Glass Sandwich",
-        desc: "Season finale. The Foxes are forced into a crisis that will either bring them back together or tear them apart forever.",
-        duration: "56 min",
-        release_date: "Jul 4",
-      },
-    ],
-    casts: [
-      {
-        img: "https://is3-ssl.mzstatic.com/image/thumb/fOKH_5kj7Y792CBiFnC8kg/492x492ve.webp",
-        original_name: "Justin Theroux",
-        cast_name: "Allie Fox",
-      },
-      {
-        img: "https://is5-ssl.mzstatic.com/image/thumb/TBDo4AO2mIKY1yrYdJbbeQ/492x492ve.webp",
-        original_name: "Melissa George",
-        cast_name: "Margot Fox",
-      },
-      {
-        img: "https://is5-ssl.mzstatic.com/image/thumb/3NMyzOQuR5bxbiVDhX3y7w/492x492ve.webp",
-        original_name: "Logan Polish",
-        cast_name: "Dina Fox",
-      },
-      {
-        img: "https://is1-ssl.mzstatic.com/image/thumb/wT4BiHDMPn3aY_CxWbwldg/492x492ve.webp",
-        original_name: "Gaberial Bateman",
-        cast_name: "Charlie Fox",
-      },
-      {
-        img: "https://is2-ssl.mzstatic.com/image/thumb/A3GB7WVPfX6Z30Bv4JnjUg/492x492bb.webp",
-        original_name: "Neil Cross",
-        cast_name: "Executive Producer",
-      },
-      {
-        img: "https://is5-ssl.mzstatic.com/image/thumb/m1qM4FBe4qN9f8OAc7ox9g/492x492bb.webp",
-        original_name: "Rupert Wyatt",
-        cast_name: "Executive Producer",
-      },
-      {
-        img: "https://is1-ssl.mzstatic.com/image/thumb/nd6qrra08q7ot2YLZhvi_w/492x492ve.webp",
-        original_name: "Edward L. McDonnell",
-        cast_name: "Executive Producer",
-      },
-      {
-        img: "https://is2-ssl.mzstatic.com/image/thumb/gb9baFpEa94p3mWZvcPIig/492x492bb.webp",
-        original_name: "Justin Theroux",
-        cast_name: "Executive Producer",
-      },
-      {
-        img: "https://is2-ssl.mzstatic.com/image/thumb/vLflCbjhVtF7JXFe2xDNWw/492x492ve.webp",
-        original_name: "Bob Bookman",
-        cast_name: "Executive Producer",
-      },
-      {
-        img: "https://is1-ssl.mzstatic.com/image/thumb/auXlMqH2JRpF7Kb2d8bTBw/492x492bb.webp",
-        original_name: "Alan Gasmer",
-        cast_name: "Executive Producer",
-      },
-      {
-        img: "https://is3-ssl.mzstatic.com/image/thumb/eZRW_l3oxkhGtxR74RfOTQ/492x492bb.webp",
-        original_name: "Peter Jaysen",
-        cast_name: "Executive Producer",
-      },
-      {
-        img: "https://is3-ssl.mzstatic.com/image/thumb/iq0PjpISz60PW5RZCBBhbA/492x492bb.webp",
-        original_name: "Paul Theroux",
-        cast_name: "Executive Producer",
-      },
-    ],
-  },
-];
+const obj = data;
 const SingleVideoGallery = () => {
   return (
     <>
@@ -283,7 +162,7 @@ const SingleVideoGallery = () => {
       </div>
       {/* ----------------- Top Sectio End here --------------------------- */}
       {/* ------------------Carousal Start ---------------------------------------- */}
-      <VStack bgColor="#2d2d2d" h="200vh">
+      <VStack bgColor="#2d2d2d" h="350vh">
         {/* #2d2d2d */}
         <Stack w="100%" p="15px">
           <Select
@@ -345,267 +224,400 @@ const SingleVideoGallery = () => {
                 })}
             </Swiper>
           </Box>
-          <VStack>
-            <Text color="white" textAlign="left" w="100%" pt="10px">
-              Trailers
-            </Text>
-            <HStack w="100%" gap="15px">
-              <Box
-                w="25%"
-                h="200px"
-                backgroundColor="white"
-                display="flex"
-                justifyItems="center"
-                justifyContent="center"
-                backgroundImage="url('https://is2-ssl.mzstatic.com/image/thumb/bcp-BsYXJg4WSm-q6njzcg/1478x832.webp')"
-                backgroundSize="cover"
-                borderRadius="10px"
-                _hover={{
-                  opacity: "0.6",
-                }}
-              >
-                {/* <Image
+          {/* ------------------------Trailer part Start from here------------------------------ */}
+          <Box borderBottom="0.1px solid gray" pb="20px">
+            <VStack>
+              <Text color="white" textAlign="left" w="100%" pt="10px">
+                Trailers
+              </Text>
+              <HStack w="100%" gap="15px">
+                <Box
+                  w="25%"
+                  h="200px"
+                  backgroundColor="white"
+                  display="flex"
+                  justifyItems="center"
+                  justifyContent="center"
+                  backgroundImage="url('https://is2-ssl.mzstatic.com/image/thumb/bcp-BsYXJg4WSm-q6njzcg/1478x832.webp')"
+                  backgroundSize="cover"
                   borderRadius="10px"
-                  src="https://is2-ssl.mzstatic.com/image/thumb/bcp-BsYXJg4WSm-q6njzcg/1478x832.webp"
                   _hover={{
                     opacity: "0.6",
                   }}
-                /> */}
-                <button
-                  className="btnhide"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
                 >
-                  <FaPlayCircle
+                  <button
+                    className="btnhide"
                     style={{
-                      width: "40px",
-                      height: "40px",
+                      width: "100%",
+                      height: "100%",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
                     }}
-                  />
-                </button>
-              </Box>
-              <Box
-                w="25%"
-                h="200px"
-                backgroundColor="white"
-                justifyItems="center"
-                justifyContent="center"
-                display="flex"
-                className="btnbox"
-                backgroundImage="url('https://is3-ssl.mzstatic.com/image/thumb/xyULr4ZjJ1zrxTWgPNkldg/1478x832.webp')"
-                backgroundSize="cover"
-                borderRadius="10px"
-                _hover={{
-                  opacity: "0.6",
-                }}
-              >
-                {/* <Image
+                  >
+                    <FaPlayCircle
+                      style={{
+                        width: "40px",
+                        height: "40px",
+                      }}
+                    />
+                  </button>
+                </Box>
+                <Box
+                  w="25%"
+                  h="200px"
+                  backgroundColor="white"
+                  justifyItems="center"
+                  justifyContent="center"
+                  display="flex"
+                  className="btnbox"
+                  backgroundImage="url('https://is3-ssl.mzstatic.com/image/thumb/xyULr4ZjJ1zrxTWgPNkldg/1478x832.webp')"
+                  backgroundSize="cover"
                   borderRadius="10px"
-                  src="https://is3-ssl.mzstatic.com/image/thumb/xyULr4ZjJ1zrxTWgPNkldg/1478x832.webp"
                   _hover={{
                     opacity: "0.6",
                   }}
-                /> */}
-                <button
-                  className="btnhide"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
                 >
-                  {" "}
-                  <FaPlayCircle
+                  <button
+                    className="btnhide"
                     style={{
-                      width: "40px",
-                      height: "40px",
+                      width: "100%",
+                      height: "100%",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
                     }}
-                  />
-                </button>
-              </Box>
-              <Box
-                w="25%"
-                h="200px"
-                backgroundColor="white"
-                display="flex"
-                justifyItems="center"
-                justifyContent="center"
-                backgroundImage="url('https://is3-ssl.mzstatic.com/image/thumb/W0VZ9__hoaDH8J0O0NvbAA/1478x832.webp')"
-                backgroundSize="cover"
-                borderRadius="10px"
-                _hover={{
-                  opacity: "0.6",
-                }}
-              >
-                {/* <Image
+                  >
+                    <FaPlayCircle
+                      style={{
+                        width: "40px",
+                        height: "40px",
+                      }}
+                    />
+                  </button>
+                </Box>
+                <Box
+                  w="25%"
+                  h="200px"
+                  backgroundColor="white"
+                  display="flex"
+                  justifyItems="center"
+                  justifyContent="center"
+                  backgroundImage="url('https://is3-ssl.mzstatic.com/image/thumb/W0VZ9__hoaDH8J0O0NvbAA/1478x832.webp')"
+                  backgroundSize="cover"
                   borderRadius="10px"
-                  src="https://is3-ssl.mzstatic.com/image/thumb/W0VZ9__hoaDH8J0O0NvbAA/1478x832.webp"
                   _hover={{
                     opacity: "0.6",
                   }}
-                /> */}
-                <button
-                  className="btnhide"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
                 >
-                  {" "}
-                  <FaPlayCircle
+                  <button
+                    className="btnhide"
                     style={{
-                      width: "40px",
-                      height: "40px",
+                      width: "100%",
+                      height: "100%",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
                     }}
-                  />
-                </button>
-              </Box>
-            </HStack>
-          </VStack>
+                  >
+                    <FaPlayCircle
+                      style={{
+                        width: "40px",
+                        height: "40px",
+                      }}
+                    />
+                  </button>
+                </Box>
+              </HStack>
+            </VStack>
+          </Box>
+          {/* ----------------------------Trailers part end here----------------------------- */}
 
-          <VStack>
-            <Text color="white" textAlign="left" w="100%" pt="10px">
-              Bonus Content
+          {/* ----------------------Bonus Content Part Start--------------------------------- */}
+          <Box borderBottom="0.1px solid gray" pb="20px">
+            <VStack>
+              <Text color="white" textAlign="left" w="100%" pt="10px">
+                Bonus Content
+              </Text>
+              <HStack w="100%" gap="15px">
+                <VStack w="25%">
+                  <Box
+                    w="100%"
+                    h="200px"
+                    backgroundColor="white"
+                    display="flex"
+                    justifyItems="center"
+                    justifyContent="center"
+                    backgroundImage="url('https://is1-ssl.mzstatic.com/image/thumb/y73ipreK3gMXTpmKCNBUKw/1478x832.webp')"
+                    backgroundSize="cover"
+                    borderRadius="10px"
+                    _hover={{
+                      opacity: "0.6",
+                    }}
+                  >
+                    <button
+                      className="btnhide"
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                      }}
+                    >
+                      <FaPlayCircle
+                        style={{
+                          width: "40px",
+                          height: "40px",
+                        }}
+                      />
+                    </button>
+                  </Box>
+                  <Text
+                    w="100%"
+                    color="white"
+                    textAlign="left"
+                    fontSize="13px"
+                    pl="5px"
+                  >
+                    A Family on the Run
+                  </Text>
+                </VStack>
+
+                <VStack w="25%">
+                  <Box
+                    w="100%"
+                    h="200px"
+                    backgroundColor="white"
+                    display="flex"
+                    justifyItems="center"
+                    justifyContent="center"
+                    backgroundImage="url('https://is4-ssl.mzstatic.com/image/thumb/zBfC_4lmX-aGrqShM4Io0A/1478x832.webp')"
+                    backgroundSize="cover"
+                    borderRadius="10px"
+                    _hover={{
+                      opacity: "0.6",
+                    }}
+                  >
+                    <button
+                      className="btnhide"
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                      }}
+                    >
+                      <FaPlayCircle
+                        style={{
+                          width: "40px",
+                          height: "40px",
+                        }}
+                      />
+                    </button>
+                  </Box>
+                  <Text
+                    w="100%"
+                    color="white"
+                    textAlign="left"
+                    fontSize="13px"
+                    pl="5px"
+                  >
+                    A Theroux Family Affair
+                  </Text>
+                </VStack>
+                <VStack width="25%">
+                  <Box
+                    w="100%"
+                    h="200px"
+                    backgroundColor="white"
+                    display="flex"
+                    justifyItems="center"
+                    justifyContent="center"
+                    backgroundImage="url('https://is4-ssl.mzstatic.com/image/thumb/5Ic1cP9utxvz-uBmEssh9A/1478x832.webp')"
+                    backgroundSize="cover"
+                    borderRadius="10px"
+                    _hover={{
+                      opacity: "0.6",
+                    }}
+                  >
+                    <button
+                      className="btnhide"
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                      }}
+                    >
+                      <FaPlayCircle
+                        style={{
+                          width: "40px",
+                          height: "40px",
+                        }}
+                      />
+                    </button>
+                  </Box>
+                  <Text
+                    w="100%"
+                    color="white"
+                    textAlign="left"
+                    fontSize="13px"
+                    pl="5px"
+                  >
+                    Inside the Episode Light Out
+                  </Text>
+                </VStack>
+              </HStack>
+            </VStack>
+          </Box>
+          {/* ----------------------Bonus Content Part End here--------------------------------- */}
+          {/* ----------------------Related Content start from here------------------------------ */}
+          <Box borderBottom="0.1px solid gray" p="30px 0px 30px 0px">
+            <Text color="white" w="100%" textAlign="left" pb="10px">
+              Related
             </Text>
-            <HStack w="100%" gap="15px">
-              <Box
-                w="25%"
-                h="200px"
-                backgroundColor="white"
+            <Swiper
+              slidesPerView={4}
+              spaceBetween={15}
+              slidesPerGroup={3}
+              loop={false}
+              loopFillGroupWithBlank={false}
+              // pagination={{
+              //   clickable: true,
+              // }}
+              breakpoints={{
+                240: {
+                  slidesPerView: 1,
+                },
+                480: {
+                  slidesPerView: 2,
+                  spaceBetween: 20,
+                },
+                640: {
+                  slidesPerView: 4,
+                  spaceBetween: 20,
+                },
+              }}
+              navigation={true}
+              modules={[Pagination, Navigation]}
+              className="mySwiper"
+            >
+              {obj &&
+                obj[0].related_contents.map((info) => {
+                  return (
+                    <SwiperSlide
+                      key={info.id}
+                      style={{ height: "auto", width: "24%" }}
+                    >
+                      {/* <Card0230 key={info.id} info={info} /> */}
+                      <Image
+                        src={info.img}
+                        borderRadius="10px"
+                        _hover={{
+                          opacity: "0.5",
+                        }}
+                      />
+                    </SwiperSlide>
+                  );
+                })}
+            </Swiper>
+          </Box>
+          {/* Related Content end here */}
+          {/* Cast and Crew Part start from here */}
+          <Box borderBottom="0.1px solid gray" p="30px 0px 30px 0px">
+            <Text color="white" w="100%" textAlign="left" pb="10px">
+              Cast and Crew
+            </Text>
+            <Swiper
+              slidesPerView={8}
+              spaceBetween={15}
+              slidesPerGroup={8}
+              loop={false}
+              loopFillGroupWithBlank={false}
+              // pagination={{
+              //   clickable: true,
+              // }}
+              breakpoints={{
+                240: {
+                  slidesPerView: 1,
+                },
+                480: {
+                  slidesPerView: 2,
+                  spaceBetween: 20,
+                },
+                640: {
+                  slidesPerView: 8,
+                  spaceBetween: 20,
+                },
+              }}
+              navigation={true}
+              modules={[Pagination, Navigation]}
+              className="mySwiper"
+            >
+              {obj &&
+                obj[0].casts.map((info) => {
+                  return (
+                    <SwiperSlide
+                      key={info.id}
+                      style={{ height: "auto", w: "25%" }}
+                    >
+                      <VStack>
+                        <Image
+                          src={info.img}
+                          borderRadius="50%"
+                          cursor="pointer"
+                        />
+                        <Text color="white" fontSize="12px">
+                          {info.original_name}
+                        </Text>
+                        <Text color="#FFFFFFA3" fontSize="12px">
+                          {info.cast_name}
+                        </Text>
+                      </VStack>
+                    </SwiperSlide>
+                  );
+                })}
+            </Swiper>
+          </Box>
+          {/* Cast and Crew Part start from here */}
+
+          {/* How To watch Apple tV */}
+          <Box borderBottom="0.1px solid gray" p="30px 0px 30px 0px" w="100%">
+            <Text color="white" w="100%" textAlign="left" pb="10px">
+              How to Watch
+            </Text>
+            <Box w="25%" borderRadius="10px">
+              <Image
+                borderTopRadius="10px"
+                src="https://is1-ssl.mzstatic.com/image/thumb/DB8YqlVtN7M8YvGvgsP2eg/400x225.png"
+              />
+              <Text
+                h="80px"
+                color="white"
                 display="flex"
-                justifyItems="center"
-                justifyContent="center"
-                backgroundImage="url('https://is1-ssl.mzstatic.com/image/thumb/y73ipreK3gMXTpmKCNBUKw/1478x832.webp')"
-                backgroundSize="cover"
-                borderRadius="10px"
-                _hover={{
-                  opacity: "0.6",
-                }}
+                alignItems="center"
+                bgColor="#1f1f1f"
+                borderBottomRadius="10px"
+                pl="10px"
               >
-                {/* <Image
-                  borderRadius="10px"
-                  src="https://is1-ssl.mzstatic.com/image/thumb/y73ipreK3gMXTpmKCNBUKw/1478x832.webp"
-                  _hover={{
-                    opacity: "0.6",
-                  }}
-                /> */}
-                <button
-                  className="btnhide"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
-                >
-                  {" "}
-                  <FaPlayCircle
-                    style={{
-                      width: "40px",
-                      height: "40px",
-                    }}
-                  />
-                </button>
-              </Box>
-              <Box
-                w="25%"
-                h="200px"
-                backgroundColor="white"
-                display="flex"
-                justifyItems="center"
-                justifyContent="center"
-                backgroundImage="url('https://is4-ssl.mzstatic.com/image/thumb/zBfC_4lmX-aGrqShM4Io0A/1478x832.webp')"
-                backgroundSize="cover"
-                borderRadius="10px"
-                _hover={{
-                  opacity: "0.6",
-                }}
-              >
-                {/* <Image
-                  borderRadius="10px"
-                  src="https://is4-ssl.mzstatic.com/image/thumb/zBfC_4lmX-aGrqShM4Io0A/1478x832.webp"
-                  _hover={{
-                    opacity: "0.6",
-                  }}
-                /> */}
-                <button
-                  className="btnhide"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
-                >
-                  {" "}
-                  <FaPlayCircle
-                    style={{
-                      width: "40px",
-                      height: "40px",
-                    }}
-                  />
-                </button>
-              </Box>
-              <Box
-                w="25%"
-                h="200px"
-                backgroundColor="white"
-                display="flex"
-                justifyItems="center"
-                justifyContent="center"
-                backgroundImage="url('https://is4-ssl.mzstatic.com/image/thumb/5Ic1cP9utxvz-uBmEssh9A/1478x832.webp')"
-                backgroundSize="cover"
-                borderRadius="10px"
-                _hover={{
-                  opacity: "0.6",
-                }}
-              >
-                {/* <Image
-                  borderRadius="10px"
-                  src="https://is4-ssl.mzstatic.com/image/thumb/5Ic1cP9utxvz-uBmEssh9A/1478x832.webp"
-                  _hover={{
-                    opacity: "0.6",
-                  }}
-                /> */}
-                <button
-                  className="btnhide"
-                  // style={{
-                  //   width: "290px",
-                  // }}
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
-                >
-                  <FaPlayCircle
-                    style={{
-                      width: "40px",
-                      height: "40px",
-                      // color: "white",
-                    }}
-                  />
-                </button>
-              </Box>
-            </HStack>
-          </VStack>
+                Start Free Trial
+              </Text>
+            </Box>
+            <Text
+              width="25%"
+              textAlign="center"
+              color="white"
+              fontSize="12px"
+              pt="5px"
+            >
+              7 days free, then ₹599/month.
+            </Text>
+          </Box>
         </div>
       </VStack>
-      {/* -------------------Carosual Part End here --------------------------- */}
     </>
   );
 };

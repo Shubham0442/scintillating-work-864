@@ -1,25 +1,26 @@
-.silder_Container{
-    padding: 100px;
-    /* border : 10px solid green; */
+.slider_Container{
+    padding: 0 35px;
+    /* position: absolute; */
+    /* top: 70%; */
+    /* border : 10px solid red; */
+    padding-bottom: 20px;
+}
+.slider_Container > h2{
+    position: absolute;
+    color: #ffffff;
+    font-size: 18px;
+    padding: 0 0 5px 20px;
+    font-weight: bold;
+    text-align: left;
+    z-index: 1000;
+    top: 74%;
 }
 .sliderBox{
-    /* height: 120px; */
-    padding: 30px 10px;
+    padding: 0 20px;
     /* border : 1px solid red; */
-    /* background-color: transparent; */
+    background-color: transparent;
 }
 .sliderBox > img{
     width: 100%;
     border-radius: 20px;
-    /* min-width:  150px;  */
 }
-/* .leftArrow{
-    postition : absolute;
-    top: 5%
-}
-
-.rightArrow{
-    postition : absolute;
-    top: 5%;
-    right : 95%
-} */
