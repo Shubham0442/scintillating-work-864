@@ -1,14 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.carousel_container{
+    position: relative;
+}
 .video_Container{
- position: relative;
- padding-bottom: 50vh;
- height: 100vh;
+ height: 43vw;
  width: 100%;
- background: url('https://is3-ssl.mzstatic.com/image/thumb/Features112/v4/bb/2c/ae/bb2cae80-b4e9-7193-8a4f-fb1129ad59ca/278c3382-c095-47b3-ba19-d82887d8b13a.png/3358x1889sr.jpg') no-repeat;
- background-size: cover;
- /* border :  1px solid red; */
+}
+.video_Container > img {
+    position: absolute; 
+    height: 100%;
+    width: 100%;  
+}
+.video_Container > video{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    /* background-video: linear-gradient(to right black, yellow); */
+    /* border : 1px solid red; */
+}
+
+.video_Container > iframe{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    
+    /* border : 1px solid red; */
 }
 
 .slider_component{
+    /* position: absolute; */
+    /* top : 0; */
+}
+
+.description-title
+{
     position: absolute;
-    top : 50%;
+    top : 44%;
+    left: 4%;
+    height : 230px;
+    width: 300px;
+    /* border :  1px solid red; */
+    text-align: left;
+}
+.description-title >  h2{
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 30px;
+}
+.description-title > p
+{
+    margin: 15px 0 0 0;
+    color: #ffffff;
+    line-height: 22px;
+    
+}   
+.description-title > button{
+    margin: 20px 0 0 0;
+    padding: 8px 60px;
+    font-size: 14px;
+    font-weight: 550;
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+    border-radius: 5px;
+
+}
+.description-title > span{
+    display: block;
+    padding: 4px 30px;
+    font-size: 12px;
+    color: #939394;
+    /* text-align: center; */
 }
