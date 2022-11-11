@@ -1,13 +1,19 @@
-import { Box,Button,Flex, FormControl, FormLabel, Image, Input, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Stack, useDisclosure } from '@chakra-ui/react'
-import React from 'react'
+import { Box,Button,Flex, FormControl, FormLabel, Image, Input, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Stack, Text, useDisclosure } from '@chakra-ui/react'
+import React, { useState } from 'react'
+import Login from '../Pages/Login';
+import Signup from '../Pages/Signup';
 import apple from "./req/appletvlogo.jpeg"
 
 
 function InitialFocus() {
   const { isOpen, onOpen, onClose } = useDisclosure()
-
+  const [toggle, setToggle] = useState(false);
   const initialRef = React.useRef(null)
   const finalRef = React.useRef(null)
+
+  const handleToggle =() => {
+    setToggle(!toggle);
+  }
 
   return (
     <>
@@ -33,60 +39,54 @@ function InitialFocus() {
         finalFocusRef={finalRef}
         isOpen={isOpen}
         onClose={onClose}
+        size={"3xl"}
+        h = {"4xl"}
       >
         <ModalOverlay />
         <ModalContent
           bgColor={"rgb(51,51,51)"}
         >
-          <ModalHeader>Create Apple ID</ModalHeader>
-          <ModalCloseButton />
+          <ModalHeader
+            color={"white"} 
+            textAlign={"center"}
+            fontSize={"3xl"}
+          >
+            {
+              toggle ? "Create Apple ID" : "Login with Apple ID"
+            }
+          </ModalHeader>
+          <ModalCloseButton color={"white"} />
           <ModalBody pb={6}>
-            <FormControl>
-              {/* <FormLabel>First name</FormLabel> */}
-              <Input
-                color={"white"}
-                bgColor={"rgb(34,34,34)"}
-                ref={initialRef} 
-                placeholder='First name' />
-            </FormControl>
-
-            <FormControl mt={4}>
-              {/* <FormLabel>Last name</FormLabel> */}
-              <Input 
-                color={"white"}
-                bgColor={"rgb(34,34,34)"} 
-                placeholder='Surname' />
-            </FormControl>
-            <FormControl mt={4}>
-              <Input
-                color={"white"}
-                bgColor={"rgb(34,34,34)"}
-                placeholder='Date of Birth' />
-              <FormLabel
-                color={"rgb(153,153,153)"}
-              >Your email will be your Apple ID</FormLabel>
-            </FormControl>
-            <FormControl mt={4}>
-              {/* <FormLabel>Last name</FormLabel> */}
-              <Input
-                color={"white"}
-                bgColor={"rgb(34,34,34)"} 
-                placeholder='name@example.com' />
-            </FormControl>
-            <FormControl mt={4}>
-              {/* <FormLabel>Last name</FormLabel> */}
-              <Input
-                color={"white"}
-                bgColor={"rgb(34,34,34)"} 
-                placeholder='Password' />
-            </FormControl>
+            {
+              toggle ? <Signup /> : <Login />
+            }
           </ModalBody>
 
-          <ModalFooter>
-            <Button colorScheme='blue' mr={3}>
-              Save
+          <ModalFooter
+            // border={"1px"}
+            // borderColor={"white"}
+            justifyContent={"space-between"}
+          >
+            {/* <Box>
+              <Text>{ toggle? "New User?" : "Already have an account?" }</Text>
+            </Box> */}
+            <Button 
+              onClick={handleToggle} 
+              variant={"link"}
+              color={"#0a84ff"} 
+            >
+              {
+                toggle ? "Already have an Apple ID" : "Create New Apple ID"
+              }
             </Button>
-            <Button onClick={onClose}>Cancel</Button>
+            {/* <Button colorScheme='blue' mr={3}>
+              Save
+            </Button> */}
+            <Button 
+            onClick={onClose}
+            bgColor={"#0a84ff"}
+            color={"white"}
+            >Cancel</Button>
           </ModalFooter>
         </ModalContent>
       </Modal>
