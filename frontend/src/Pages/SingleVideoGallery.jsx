@@ -5,7 +5,6 @@ import {
   HStack,
   Image,
   Select,
-  Slide,
   Stack,
   Text,
   VStack,
@@ -162,7 +161,7 @@ const SingleVideoGallery = () => {
       </div>
       {/* ----------------- Top Sectio End here --------------------------- */}
       {/* ------------------Carousal Start ---------------------------------------- */}
-      <VStack bgColor="#2d2d2d" h="350vh">
+      <VStack bgColor="#2d2d2d" h="342vh">
         {/* #2d2d2d */}
         <Stack w="100%" p="15px">
           <Select
@@ -618,6 +617,11 @@ const SingleVideoGallery = () => {
           </Box>
         </div>
       </VStack>
+      <VStack
+        h="100vh"
+        bgColor="
+#1f1f1f"
+      ></VStack>
     </>
   );
 };
