@@ -1,8 +1,11 @@
 import React , { useEffect }from 'react'
 import Slider from '../Components/SlickSlider'
+import SSliderOne from '../Components/StaticSliders/SSliderOne'
+import SSliderTwo from '../Components/StaticSliders/SSliderTwo'
 import { useSelector , useDispatch} from 'react-redux';
 import { getProducts } from '../Redux/AllProductsGalleryReducer/action'
 import './Home.css'
+import staticData from '../data/sliderData.json'
 
 
 const Home = () => {
@@ -34,6 +37,11 @@ const Home = () => {
     <Slider arraySeries = {seriesData?.allSeries}/>
     </div>
     </div>
+
+    <SSliderOne sliderOne = {staticData.sliderOne}/>
+    <SSliderTwo slidertwo = {staticData.sliderTwo}/>
+    <SSliderTwo slidertwo = {staticData.sliderThree}/>
+    <SSliderTwo slidertwo = {staticData.sliderFour}/>
     </>
   )
 }
