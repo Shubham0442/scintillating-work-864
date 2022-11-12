@@ -1,4 +1,4 @@
-import { Box, Button, FormControl, Input } from '@chakra-ui/react'
+import { Box, Button, FormControl, Input, useToast } from '@chakra-ui/react'
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
@@ -10,6 +10,8 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const loginToast = useToast()
+  const invalidToast = useToast()
 
   const handleSubmit = () => {
     const payload = {
@@ -17,13 +19,28 @@ const Login = () => {
       password
     }
     dispatch(userLogin(payload))
-    .then((res) => {
-      if(res.type === "USER_LOGIN_SUCCESS"){
-        alert("Login Succesful")
+    .then((res) => { 
+      console.log("login",res)
+      if(res.payload !== null){
+        loginToast({
+          title: "Login Successful",
+          duration: 4000,
+          position: "top",
+          isClosable: true,
+          ststus: "success"
+        })
       }
       else{
-        alert("Invalid credentials")
+        invalidToast({
+          title: "Please Enter valid cridentials",
+          duration: 4000,
+          position: "top",
+          isClosable: true,
+          ststus: "error"
+        })
       }
+
+
     })
   }
 
@@ -38,6 +55,7 @@ const Login = () => {
         margin={"auto"}
         alignItems={"center"}
         justifyContent={"center"}
+        h={"350px"}
       >
             <FormControl
               mt={4} isRequired
@@ -67,7 +85,7 @@ const Login = () => {
               bgColor={"#0a84ff"}
               color={"white"}
             >
-              Login
+              Signin
             </Button>
       </Box>
     </>

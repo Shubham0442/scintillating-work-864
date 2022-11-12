@@ -17,13 +17,17 @@ loginRouter.post("/", async(req, res)=>{
 
     bcrypt.compare(password, currentUser.password, function(err, result) {
          
+
+        if(err){
+            res.status(401).send({ msg: "please login again" });
+        }
         if(result){
 
             const token = jwt.sign({ userId: currentUser._id, email: currentUser.email }, process.env.KEY);
             res.status(201).send({ msg: "Login Successfull", token: token });
         }
         else{
-            res.status(401).send({ msg: "please login again" });
+            res.send({ msg: "please login again" });
         }
          
     });
