@@ -32,7 +32,7 @@ export const userAuthReducer = (state = initState, { type, payload }) => {
                 ...state,
                 isLoading: false,
                 isError : true,
-                isAuth : true,
+                isAuth : false,
                 token : payload
             } 
         }

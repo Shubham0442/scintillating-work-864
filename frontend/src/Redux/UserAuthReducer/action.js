@@ -13,7 +13,7 @@ export const userSignup =(cred) => (dispatch) => {
         console.log(error)
         dispatch({type: USER_SIGNUP_FAILURE})
     })
-    console.log(cred);
+    //console.log(cred);
 }
 
 export const userLogin = (cred) => (dispatch) => {
@@ -21,8 +21,15 @@ export const userLogin = (cred) => (dispatch) => {
 
     return axios.post("http://localhost:5251/login", cred)
     .then((res) => {
-        console.log(res.data)
-        return dispatch({ type: USER_LOGIN_SUCCESS, payload : res.data.token })
+        console.log(res.data.token)
+
+        if(res.data.token){
+            return dispatch({ type: USER_LOGIN_SUCCESS, payload : res.data.token })
+        }
+        else{
+            return dispatch({ type: USER_LOGIN_FAILURE, payload : null })
+        }
+        
     })
     .catch((error) => {
         console.log(error)

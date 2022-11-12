@@ -1,7 +1,10 @@
 import { Box,Button,Flex, FormControl, FormLabel, Image, Input, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Stack, Text, useDisclosure } from '@chakra-ui/react'
 import React, { useState } from 'react'
+import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import Login from '../Pages/Login';
 import Signup from '../Pages/Signup';
+import AccountPopup from './AccountPopup';
 import apple from "./req/appletvlogo.jpeg"
 
 
@@ -10,13 +13,17 @@ function InitialFocus() {
   const [toggle, setToggle] = useState(false);
   const initialRef = React.useRef(null)
   const finalRef = React.useRef(null)
+  const isAuthUser = useSelector((state)=>state.userAuthReducer.isAuth)
 
   const handleToggle =() => {
     setToggle(!toggle);
   }
 
   return (
-    <>
+    <>{
+          isAuthUser ?  <AccountPopup/> :
+      
+      
       <Button 
         h={"60%"}
         backgroundColor={"#0a84ff"}
@@ -29,7 +36,7 @@ function InitialFocus() {
         onClick={onOpen}
         >
           Sign in
-      </Button>
+      </Button>}
       {/* <Button ml={4} ref={finalRef}>
         I'll receive focus on close
       </Button> */}
@@ -90,7 +97,10 @@ function InitialFocus() {
           </ModalFooter>
         </ModalContent>
       </Modal>
+
+          
     </>
+          
   )
 }
 
@@ -114,12 +124,14 @@ const Navbar = () => {
         h={"100%"}
         alignItems={"center"}
         justifyContent={"flex-start"}
-      >
+      > 
+        <Link to={"/"}>
         <Box
           h={"60%"}
         >
           <Image _hover={{cursor: "pointer"}} maxH={"100%"} src={apple} ></Image>
         </Box>
+        </Link>
       </Flex>
       <Stack
         // border={"1px"}

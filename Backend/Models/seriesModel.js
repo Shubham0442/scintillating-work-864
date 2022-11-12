@@ -12,6 +12,7 @@ const seriesSchema = mongoose.Schema({
      releaseYear: { type: String, required: true},
      duration: { type: String, required: true},
      videoLink: { type: String, required: true},
+     nameImg: { type: String}
 }) 
 
 
