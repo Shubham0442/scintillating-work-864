@@ -1,19 +1,19 @@
-import React from 'react'
+import React , { useEffect }from 'react'
 import Slider from '../Components/SlickSlider'
+import { useSelector , useDispatch} from 'react-redux';
+import { getProducts } from '../Redux/AllProductsGalleryReducer/action'
 import './Home.css'
 
 
-
-const sliderInformatio = [
-  {
-    id : "The Mosquito Coast",
-    title : "https://is3-ssl.mzstatic.com/image/thumb/nDP-acPZL94j4i-_QkvgOA/1200x450at.webp",
-
-  }
-]
-
-
 const Home = () => {
+
+  const seriesData = useSelector(state => state.seriesDataReducer.products);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getProducts());
+    console.log("Series Data", seriesData)
+  }, [])
   return (
     <>
     <div className = "carousel_container">
@@ -31,7 +31,7 @@ const Home = () => {
       <span>7 days free, then $6.99/month</span>
     </div>
     <div className = "slider_component">
-    <Slider />
+    <Slider arraySeries = {seriesData?.allSeries}/>
     </div>
     </div>
     </>
