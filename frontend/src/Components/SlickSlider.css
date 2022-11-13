@@ -1,11 +1,14 @@
-.slider_Container{
+.slider_container{
     padding: 0 35px;
     /* position: absolute; */
     /* top: 70%; */
-    /* border : 10px solid red; */
+    border : 10px solid red;
     padding-bottom: 20px;
 }
-.slider_Container > h2{
+.slideBottomPadding{
+    display: none;
+}
+.slider_container > h2{
     position: absolute;
     color: #ffffff;
     font-size: 18px;
@@ -19,6 +22,9 @@
     padding: 0 10px;
     /* border : 1px solid red; */
     background-color: transparent;
+}
+.sliderBox :hover{
+    opacity: 0.5;
 }
 .sliderBox > img{
     width: 100%;

@@ -3,11 +3,15 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 // import { Link, Navigate, useSearchParams } from "react-router-dom";
-import "./SSliderOne.css";
+import "./SSliderTwo.css";
 
 export default class Responsive extends Component {
   render() {
     // console.log("slider-props", this.props.arraySeries)
+    let newClass = ""
+    if(this.props?.val){
+      newClass = "newClass"
+    }
     var settings = {
       dots: false,
       infinite: false,
@@ -47,11 +51,11 @@ export default class Responsive extends Component {
     };
     return (
       <div>
-        <div className="slider_Container">
-          {/* <h2>{this.props.slidertwo.title}</h2> */}
+        <div className="slidertwo_Container">
+          <h2 className = {`${newClass}`}>{this.props.slidertwo.title}</h2>
           <Slider {...settings}>
                 {this.props.slidertwo.imgUrl.map((el) => {
-                  return <div className = "sliderBox">
+                  return <div className = "slidertwoBox">
                     <img src = {el} />    
                   </div>
                   })}
