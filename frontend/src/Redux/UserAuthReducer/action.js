@@ -4,7 +4,7 @@ import { USER_LOGIN_FAILURE, USER_LOGIN_REQUEST, USER_LOGIN_SUCCESS, USER_LOGOUT
 export const userSignup =(cred) => (dispatch) => {
     dispatch({type : USER_SIGNUP_REQUEST})
 
-    return axios.post("http://localhost:5251/signup", cred)
+    return axios.post(`${process.env.REACT_APP_BASE_URL}/signup`, cred)
     .then((res) => {
         console.log(res.data)
         return dispatch({type: USER_SIGNUP_SUCCESS})
@@ -19,7 +19,7 @@ export const userSignup =(cred) => (dispatch) => {
 export const userLogin = (cred) => (dispatch) => {
     dispatch({ type : USER_LOGIN_REQUEST })
 
-    return axios.post("http://localhost:5251/login", cred)
+    return axios.post(`${process.env.REACT_APP_BASE_URL}/login`, cred)
     .then((res) => {
         console.log(res.data.token)
 

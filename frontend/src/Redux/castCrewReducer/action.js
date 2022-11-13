@@ -5,7 +5,7 @@ export const getCast = (id)=>(dispatch)=>{
     
      dispatch({ type: GET_CAST_CREW_REQUEST })
    
-      return axios.get(`http://localhost:5251/cast/read/${id}`)
+      return axios.get(`${process.env.REACT_APP_BASE_URL}/cast/read/${id}`)
       .then((res)=>{
         // console.log("from cast action",res.data.castAndCrew)
          dispatch({ type: GET_CAST_CREW_SUCCESS, payload: res.data.castAndCrew})
