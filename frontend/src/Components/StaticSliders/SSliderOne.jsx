@@ -8,6 +8,10 @@ import "./SSliderOne.css";
 export default class Responsive extends Component {
   render() {
     // console.log("slider-props", this.props.arraySeries)
+    let extraClass = ""
+    if(this.props?.val){
+      extraClass = "extraClass"
+    }
     var settings = {
       dots: false,
       infinite: false,
@@ -47,15 +51,15 @@ export default class Responsive extends Component {
     };
     return (
       <div>
-        <div className="slider_Container">
-          {/* <h2>{this.props.sliderOne.title}</h2> */}
+        <div className="sliderone_Container">
+          <h2 className = {`${extraClass}`}>{this.props.sliderOne.title}</h2>
           <Slider {...settings}>
                 {this.props.sliderOne.titleInfo.map((el) => {
-                  return <div className = "sliderBox">
+                  return <div className = "slideroneBox">
                     <img src = {el.imgUrl} />
-                    <p className = "episodePara">{el.episodes}</p>
-                    <p className = "episodeName">{el.episodeTitle}</p>
-                    <p className = "episodeDescription">{el.episodeDesc}</p>
+                    <p className = "episodeonePara">{el.episodes}</p>
+                    <p className = "episodeoneName">{el.episodeTitle}</p>
+                    <p className = "episodeoneDescription">{el.episodeDesc}</p>
                    
                   </div>
                   })}

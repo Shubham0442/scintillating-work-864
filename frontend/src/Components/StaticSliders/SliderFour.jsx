@@ -2,25 +2,18 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Link, Navigate, useSearchParams } from "react-router-dom";
-import "./SlickSlider.css";
+// import { Link, Navigate, useSearchParams } from "react-router-dom";
+import "./SSliderFour.css";
 
 export default class Responsive extends Component {
   render() {
-    console.log("slider-props", this.props.arraySeries)
-    let extraClass = "";
-    if(this.props.styleWrap)
-    {
-      extraClass = 'slideBottomPadding'
-    }
-
-   
+    // console.log("slider-props", this.props.arraySeries)
     var settings = {
       dots: false,
       infinite: false,
       speed: 500,
-      slidesToShow: 6,
-      slidesToScroll: 6,
+      slidesToShow: 4,
+      slidesToScroll: 4,
       initialSlide: 0,
      
       responsive: [
@@ -54,16 +47,15 @@ export default class Responsive extends Component {
     };
     return (
       <div>
-        <div className= {`slider_container`}>
-          <h2 className= {`${extraClass}`}>Featured</h2>
+        <div className="sliderfour_Container">
+          <h2>{this.props.sliderfour.title}</h2>
+          <p className = "titleDesc">{this.props.sliderfour.desc}</p>
           <Slider {...settings}>
-            {this.props.arraySeries?.map((el) => {
-              return <Link to = {`/${el._id}`}>
-              <div key = {el._id} className= {`sliderBox`}>
-              <img src= {el.cover} />
-            </div>
-            </Link>
-            })}
+                {this.props.sliderfour.imgUrl.map((el) => {
+                  return <div className = "sliderfourBox">
+                    <img src = {el} />    
+                  </div>
+                  })}
           </Slider>
         </div>
       </div>

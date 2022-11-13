@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+.parent_container{
+    position: relative;
+    /* border : 1px solid red; */
+    height: 80vh;
+    width: 100%;
+    padding : 0 35px;
+    background-color: #2D2D2D;
+    /* border-top: 1px solid rgb(255, 255, 255, 0.1); */
+}
+
+.child_container{
+    /* position: absolute; */
+    /* border: 1px solid black; */
+    height: 100%;
+    padding : 20px 0;
+    border-top: 1px solid rgb(255, 255, 255, 0.1);
+}
+.childBox_element{
+    /* border: 1px solid red; */
+    height: 74vh;
+    width: 100%;
+}
+.childBox_element > img{
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;    
+    /* object-fit: fill; */
+}
