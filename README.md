@@ -68,5 +68,28 @@ https://drive.google.com/file/d/1JaB2vf-PUhVhfFv4GRksJ2iOx9_pxcRV/view?usp=share
 
 ## Authors 
 1. Shubham Rakhonde 
-[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/Shubham0442)
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://shubham0442.github.io/)
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/shubham-rakhonde-102964166/)
+
+1. Shashank Sinha 
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://shashanksinha20.github.io/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/shashank-sinha-030408155/)
+
+1. Abhay Agrawal 
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://abhayag10.github.io/portfolio/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/abhay-agrawal-120731178/)
+
+1. Rajinder Yadav
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://r-yaduvanshi.github.io/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/r-yadav/)
+
+1. Arungaud Patil 
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://arungoud23.github.io/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/arungoud-patil-28772a192/) 
+
+If you have any feedback, any suggestion please reach out to us at
+- shubhammrakhonde@gmail.com 
+- shashanksinha393@gmail.com
+- abhaytalkin@gmail.com
+- ajendra.yadaav24@gmail.com 
+- arunkumarpatil98@gmail.com
