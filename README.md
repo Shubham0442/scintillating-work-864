@@ -22,4 +22,51 @@ Apple tv clone is a clone of a Over The Top platform. Apple TV+ is streeming ser
 
 ![App ScreenShot](https://i.imgur.com/RHAOLiR.png)
 
-![App ScreenShot](https://i.imgur.com/BWW8ZYC.png)
+![App ScreenShot](https://i.imgur.com/BWW8ZYC.png) 
+
+- Signal Content Page 
+![App ScreenShot](https://i.imgur.com/2S9roaj.png)  
+![App ScreenShot](https://i.imgur.com/3dPFeCR.png) 
+
+- Sign up 
+
+![App ScreenShot](https://i.imgur.com/LswlXmT.png) 
+
+- Sign in 
+
+![App ScreenShot](https://i.imgur.com/njiCPaw.png)  
+
+- Video Player Page 
+
+![App ScreenShot](https://i.imgur.com/cPPGkIO.png)  
+
+## Tech-Stack used :
+### Frontend
+- HTML
+- CSS
+- JavaScript
+- React
+- Redux
+- React-router-dom
+- Axios
+- chakra-Ui 
+
+### Backend
+- NodeJS
+- ExpressJS
+- MongoDB
+- Mongoose
+- Mongo Atlus
+- Bcrypt
+- Json Web Token
+
+## Deployment Link: 
+https://appletvclone.netlify.app/
+
+## Video Presentation Link: 
+https://drive.google.com/file/d/1JaB2vf-PUhVhfFv4GRksJ2iOx9_pxcRV/view?usp=share_link 
+
+## Authors 
+1. Shubham Rakhonde 
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/Shubham0442)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/shubham-rakhonde-102964166/)
