@@ -90,5 +90,5 @@ If you have any feedback, any suggestion please reach out to us at
 - shubhammrakhonde@gmail.com 
 - shashanksinha393@gmail.com
 - abhaytalkin@gmail.com
-- ajendra.yadaav24@gmail.com 
+- rajendra.yadaav24@gmail.com 
 - arunkumarpatil98@gmail.com
